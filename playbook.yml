@@ -6,13 +6,13 @@
   tasks:
   - name: Ensure nginx package is present #проверяем, что пакет установлен
     apt:
-    name: nginx
-    state: present #установлен
+      name: nginx
+      state: present #установлен
 
   - name: Ensure index.html is present
     copy:
-    src: index.html
-    dest: /var/www/html
+      src: index.html
+      dest: /var/www/html
 
   - name: Ensure nginx service is started
     service:
@@ -26,8 +26,8 @@
   tasks:
   - name: Ensure postgresql is present
     apt:
-    name: postgresql
-    state: present
+      name: postgresql
+      state: present
 
   - name: Ensure postresql service is started
   service:
