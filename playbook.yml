@@ -28,7 +28,7 @@
     apt:
     name: postgresql
     state: present
-  
+
   - name: Ensure postresql service is started
   service:
     name: postgresql
