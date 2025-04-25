@@ -1,16 +1,16 @@
 ---
-- name install nginx
+- name: install nginx
   hosts: web
   become: yes #на всякий случай станем суперпользователем
 
   tasks:
   - name: Ensure nginx package is present #проверяем, что пакет установлен
-  apt:
+    apt:
     name: nginx
     state: present #установлен
 
   - name: Ensure index.html is present
-  copy:
+    copy:
     src: index.html
     dest: /var/www/html
 
@@ -29,7 +29,7 @@
     name: postgresql
     state: present
   
-  -name: Ensure postresql service is started
+  - name: Ensure postresql service is started
   service:
     name: postgresql
     state: started #запущен
