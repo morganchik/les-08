@@ -31,5 +31,5 @@
 
   - name: Ensure postresql service is started
     service:
-    name: postgresql
-    state: started #запущен
+      name: postgresql
+      state: started #запущен
