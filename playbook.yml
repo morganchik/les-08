@@ -30,6 +30,6 @@
       state: present
 
   - name: Ensure postresql service is started
-  service:
+    service:
     name: postgresql
     state: started #запущен
